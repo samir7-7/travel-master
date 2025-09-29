@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Travel Master Thailand Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 210 24% 16%;
+    
+    /* Travel Master Thailand Brand Colors */
+    --primary: 202 65% 42%; /* #378DCD - Main brand blue */
+    --primary-light: 202 65% 55%;
+    --primary-dark: 202 65% 35%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Tropical accent colors */
+    --tropical: 183 74% 48%; /* Turquoise water */
+    --tropical-light: 183 74% 65%;
+    --tropical-foreground: 0 0% 100%;
+    
+    --sunset: 31 82% 56%; /* Thai sunset orange */
+    --sunset-light: 31 82% 70%;
+    --sunset-foreground: 0 0% 100%;
+    
+    /* Neutral system */
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+    
+    --secondary: 210 17% 96%;
+    --secondary-foreground: 210 24% 16%;
+    
+    --muted: 210 17% 96%;
+    --muted-foreground: 210 13% 45%;
+    
+    --accent: 202 65% 95%;
+    --accent-foreground: 202 65% 25%;
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 202 65% 42%;
+    
+    /* Semantic colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Design tokens */
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--tropical)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--tropical) / 0.8));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset)), hsl(var(--primary)));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 15px -3px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 4px 25px -5px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 10px 40px -10px hsl(var(--primary) / 0.25);
+    
+    /* Animation easing */
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-bounce: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 24% 8%;
+    --foreground: 210 17% 96%;
+    
+    --primary: 202 65% 55%;
+    --primary-light: 202 65% 65%;
+    --primary-dark: 202 65% 45%;
+    --primary-foreground: 210 24% 8%;
+    
+    --tropical: 183 74% 55%;
+    --tropical-light: 183 74% 70%;
+    --tropical-foreground: 210 24% 8%;
+    
+    --sunset: 31 82% 65%;
+    --sunset-light: 31 82% 75%;
+    --sunset-foreground: 210 24% 8%;
+    
+    --card: 210 24% 10%;
+    --card-foreground: 210 17% 96%;
+    
+    --secondary: 210 24% 12%;
+    --secondary-foreground: 210 17% 96%;
+    
+    --muted: 210 24% 12%;
+    --muted-foreground: 210 13% 60%;
+    
+    --accent: 210 24% 14%;
+    --accent-foreground: 202 65% 70%;
+    
+    --border: 210 24% 18%;
+    --input: 210 24% 18%;
+    --ring: 202 65% 55%;
+    
+    --success: 142 71% 55%;
+    --warning: 45 93% 57%;
+    --destructive: 0 84% 70%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--tropical)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.85), hsl(var(--tropical) / 0.75));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset)), hsl(var(--primary)));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom animations and utilities */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s var(--ease-smooth) forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s var(--ease-smooth) forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s var(--ease-bounce) forwards;
+  }
+  
+  .animate-count-up {
+    animation: countUp 2s var(--ease-smooth) forwards;
+  }
+  
+  .parallax-slow {
+    transform: translateY(var(--parallax-offset, 0));
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-sunset { 
+    background: var(--gradient-sunset);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--background) / 0.8);
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in,
+    .animate-count-up {
+      animation: none !important;
+    }
+    
+    .parallax-slow {
+      transform: none !important;
+    }
+    
+    * {
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
