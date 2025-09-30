@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const message = "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
 
   return (
     <footer className="bg-foreground text-white" role="contentinfo">
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-tropical-light">
+            <h3 className="text-2xl font-bold text-tropical-light font-sans">
               Travel Master Thailand
             </h3>
             <p className="text-white/80 leading-relaxed">
@@ -144,7 +145,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-tropical-light">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-tropical-light font-sans">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-tropical-light mt-0.5 flex-shrink-0" aria-hidden="true" />
@@ -157,10 +158,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-tropical-light flex-shrink-0" aria-hidden="true" />
                 <a 
-                  href="tel:REPLACE_WITH_WHATSAPP_NUMBER" 
+                  href="tel:9844600098" 
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
-                  REPLACE_WITH_WHATSAPP_NUMBER
+                  9844600098
                 </a>
               </div>
               
@@ -177,7 +178,7 @@ const Footer = () => {
 
             {/* WhatsApp CTA */}
             <Button
-              onClick={() => window.open('https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER', '_blank')}
+              onClick={() =>window.open(`https://wa.me/9844600098?text=${message}`, '_blank')}
               className="w-full bg-success hover:bg-success/90 text-success-foreground mt-4"
               aria-label="Contact us on WhatsApp"
             >

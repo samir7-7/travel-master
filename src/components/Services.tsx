@@ -32,7 +32,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className={`text-center mb-16 ${shouldAnimate ? 'animate-slide-up' : 'opacity-0'}`}>
-          <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-sans">
             Our Expert Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

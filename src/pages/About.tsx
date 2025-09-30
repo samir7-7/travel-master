@@ -2,11 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
-import heroImage from "@/assets/hero-thailand.jpg";
 import { useEffect } from "react";
-import OfficeMap from "@/components/OfficeMap";
+
 
 const About = () => {
+  const message = "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
   useEffect(() => {
     document.title = 'About Travel Master Thailand | Expert Thailand Travel Company';
   
@@ -25,10 +25,10 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Mohan",
+      name: "Roshan Sapkota",
       position: "CEO",
       image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Mohan is a serial entrepreneur, international hotelier. He is into travel business since more than a decade with full of knowledge from many countries like – Thailand, Dubai, Azerbaijan, Singapore, Malaysia, Indonesia, Spain, Italy, Netherlands and many more into his network group."
+      description: "Roshan is a serial entrepreneur, international hotelier. He is into travel business since more than a decade with full of knowledge from many countries like – Thailand, Dubai, Azerbaijan, Singapore, Malaysia, Indonesia, Spain, Italy, Netherlands and many more into his network group."
     },
     {
       name: "Shan",
@@ -63,7 +63,7 @@ const About = () => {
       <main id="main-content" role="main">
         {/* Hero Section with Background Image */}
         <section 
-          className="relative pt-32 pb-16 bg-cover bg-center bg-no-repeat"
+          className="relative pt-32 pb-16 bg-cover bg-center bg-no-repeat font-jakarta-sans"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/3732494/pexels-photo-3732494.jpeg')`
           }}
@@ -88,9 +88,10 @@ const About = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="order-2 lg:order-1">
                   <img 
-                    src="https://images.pexels.com/photos/2990644/pexels-photo-2990644.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://images.pexels.com/photos/3393546/pexels-photo-3393546.jpeg"
                     alt="Travel Master Thailand team"
                     className="w-full h-[500px] object-cover rounded-lg shadow-medium"
+                    loading="lazy"
                   />
                 </div>
                 <div className="order-1 lg:order-2">
@@ -149,6 +150,7 @@ const About = () => {
                         src={member.image}
                         alt={`${member.name} - ${member.position}`}
                         className="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-medium"
+                        loading="lazy"
                       />
                       <div className="text-sm font-semibold text-primary mb-1 uppercase tracking-wide">
                         {member.position}
@@ -179,7 +181,7 @@ const About = () => {
                 Let our experienced team create the perfect Thailand experience tailored just for you.
               </p>
               <button 
-                onClick={() => window.open('https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER', '_blank')}
+                onClick={() => window.open(`https://wa.me/9844600098?text=${message}`, '_blank')}
                 className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300 shadow-medium hover:shadow-strong"
               >
                 Contact Us Today

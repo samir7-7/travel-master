@@ -35,13 +35,14 @@ function Connect() {
     src="https://www.pngkit.com/png/full/325-3253264_pattern.png"
     alt=""
     className="invert opacity-5 w-full h-full object-cover absolute"
+    loading="lazy"
   />
 
   <div className="w-[90%] md:w-[60%]">
 
     {/* MOBILE LAYOUT */}
     <div className="flex flex-col gap-3 w-full justify-between md:hidden">
-      <h1 className="font-alan font-bold text-xl text-gray-100">
+      <h1 className="font-alan font-bold text-xl text-gray-100 font-sans">
         We Make <br />World Travel Easy
       </h1>
       <p className="text-white text-[10px] w-[62%]">
@@ -51,23 +52,23 @@ function Connect() {
         Explore Now
       </button>
       <div className="absolute bottom-0 w-fit -right-10">
-        <img src={Girl} className="w-[190px]" alt="Image of a girl with a bagpack" />
+        <img src={Girl} className="w-[190px]" alt="Image of a girl with a bagpack" loading="lazy"/>
       </div>
     </div>
 
     {/* LAPTOP LAYOUT (UNCHANGED) */}
     <div className="hidden md:flex flex-col gap-5 w-[60%] justify-center">
-      <h1 className="font-alan font-bold text-3xl text-gray-100">
+      <h1 className="font-bold text-3xl text-gray-100 font-sans">
         We Make <br />World Travel Easy
       </h1>
       <p className="text-white">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut, enim eaque delectus nemo nisi eos nam suscipit est earum ea doloribus illum tempora deserunt expedita magni, incidunt molestiae dolore corrupti inventore voluptate. Cupiditate, totam iste deleniti quisquam et quidem dignissimos! Voluptates, repudiandae eveniet. Sapiente?
       </p>
-      <button className="bg-gray-50 text-blue-500 px-5 py-3 w-[30%] rounded-lg">
+      <button className="bg-gray-50 text-blue-500 px-5 py-3 w-[30%] rounded-lg cursor-pointer z-20 hover:bg-blue-50">
         Explore Now
       </button>
       <div className="absolute bottom-0 right-20">
-        <img src={Girl} className="w-[400px]" alt="Image of a girl with a bagpack" />
+        <img src={Girl} className="w-[400px]" alt="Image of a girl with a bagpack" loading="lazy"/>
       </div>
     </div>
 

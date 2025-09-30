@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
+import { Image } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const message = "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -16,9 +17,9 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
+     { href: '/', label: 'Home', isInternal: false },
     { href: '#services', label: 'Services', isInternal: true },
     { href: '#packages', label: 'Packages', isInternal: true },
-    { href: '#why-choose-us', label: 'Why Book With Us', isInternal: true },
     { href: '/about', label: 'About', isInternal: false },
     { href: '#testimonials', label: 'Testimonials', isInternal: true }
   ];
@@ -54,7 +55,8 @@ const Navigation = () => {
               className="text-2xl font-bold text-white hover:text-tropical-light transition-colors duration-300"
               aria-label="Travel Master Thailand - Home"
             >
-              <img src="/travelmasterlogo.svg" width={110} alt="travel master logo" />
+              <img src="/travelmasterlogo.svg" width={110} alt="travel master logo" loading="lazy"/>
+             
             </a>
           </div>
 
@@ -75,7 +77,7 @@ const Navigation = () => {
             ))}
             
             <Button
-              onClick={() => window.open('https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER', '_blank')}
+              onClick={() => window.open(`https://wa.me/9844600098?text=${message}`, '_blank')}
               className="bg-success hover:bg-success/90 text-success-foreground"
               aria-label="Contact us on WhatsApp"
             >
@@ -115,7 +117,7 @@ const Navigation = () => {
               <div className="pt-2">
                 <Button
                   onClick={() => {
-                    window.open('https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER', '_blank');
+                    window.open(`https://wa.me/9844600098?text=${message}`, '_blank');
                     setIsMobileMenuOpen(false);
                   }}
                   className="w-full bg-success hover:bg-success/90 text-success-foreground"

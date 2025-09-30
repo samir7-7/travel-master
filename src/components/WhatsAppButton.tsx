@@ -29,7 +29,7 @@ const WhatsAppButton = () => {
 
   const handleWhatsAppClick = () => {
     // REPLACE_WITH_WHATSAPP_NUMBER - User should replace with actual WhatsApp number
-    const whatsappNumber = 'REPLACE_WITH_WHATSAPP_NUMBER'; 
+    const whatsappNumber = '9844600098'; 
     const message = encodeURIComponent(
       'Hello! I\'m interested in learning more about your Thailand travel packages. Can you help me plan my trip?'
     );

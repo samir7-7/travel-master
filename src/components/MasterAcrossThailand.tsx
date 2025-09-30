@@ -192,7 +192,7 @@ const ThailandDestinations: React.FC = () => {
   return (
     <section className="bg-[#fff8ed] px-6 sm:px-10 md:px-12 py-12 md:py-16 flex flex-col justify-center items-center h-fit w-full gap-12 md:gap-16">
       {/* Section Title */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center font-sans">
         Master Across Thailand
       </h1>
 
@@ -251,7 +251,7 @@ const ThailandDestinations: React.FC = () => {
             className="
               shadow-lg w-[80%] sm:w-[220px] md:w-[300px] h-auto mt-6
               md:mt-0 md:absolute md:top-16 md:left-[100px]
-            "
+            "loading="lazy"
           />
         </div>
       </div>

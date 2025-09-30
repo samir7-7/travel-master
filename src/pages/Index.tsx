@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Connect from "@/components/Connect";
 import { useEffect } from "react";
+import Destinations from "@/components/Destinations";
 
 const Index = () => {
   // SEO and performance optimizations
@@ -46,6 +47,7 @@ const Index = () => {
         <WhyChoose />
         <Services />
         <Packages />
+        <Destinations />
         <MasterAcrossThailand />
         <Counters />
         <Connect/>

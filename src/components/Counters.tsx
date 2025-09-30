@@ -22,7 +22,7 @@ const counterData = [
   {
     id: 'destinations',
     icon: MapPin,
-    number: 50,
+    number: 6,
     suffix: '+',
     label: 'Destinations',
     description: 'Amazing locations across Thailand'
@@ -50,7 +50,7 @@ const Counters = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className={`text-center mb-16 ${shouldAnimate ? 'animate-slide-up' : 'opacity-0'}`}>
-          <h2 id="counters-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 id="counters-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">
             Trusted by Travelers Worldwide
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -95,7 +95,7 @@ const Counters = () => {
                     {shouldAnimate ? count : 0}
                     <span className="text-tropical">{counter.suffix}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300 font-sans">
                     {counter.label}
                   </h3>
                 </div>

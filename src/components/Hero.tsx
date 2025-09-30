@@ -30,7 +30,7 @@ const Hero = () => {
         <div className={`max-w-4xl mx-auto space-y-8 ${shouldAnimate ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Main Headline */}
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mt-20 md:mt-0 lg:mt-0 font-sans">
               Discover the
               <span className="block bg-gradient-to-r from-tropical-light to-sunset bg-clip-text text-transparent">
                 Magic of Thailand
@@ -44,14 +44,15 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
+            <a href="#packages"><Button 
               size="lg" 
               className="bg-primary hover:bg-primary-dark text-white px-8 py-6 text-lg shadow-strong transition-all duration-300 hover:scale-105"
               aria-label="Explore tour packages"
             >
               Explore Packages
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-            </Button>
+            </Button></a>
+            
             <Button 
               variant="outline" 
               size="lg"

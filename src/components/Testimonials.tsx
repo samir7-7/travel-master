@@ -48,10 +48,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className={`text-center mb-16 ${shouldAnimate ? 'animate-slide-up' : 'opacity-0'}`}>
-          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-4 font-sans">
             What Our Travelers Say
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Real experiences from real travelers who discovered the magic of Thailand with us.
           </p>
         </div>
@@ -142,28 +142,14 @@ const Testimonials = () => {
           <div className="text-center mt-4">
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="text-white/70 hover:text-white text-sm transition-colors duration-300"
+              className="text-gray-700 hover:text-gray-900 text-sm transition-colors duration-300"
               aria-label={isAutoPlaying ? 'Pause auto-play' : 'Resume auto-play'}
             >
               {isAutoPlaying ? 'Auto-playing' : 'Paused'} • Click to {isAutoPlaying ? 'pause' : 'resume'}
             </button>
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className={`text-center mt-16 ${shouldAnimate ? 'animate-fade-in' : 'opacity-0'}`}>
-          <p className="text-xl text-white/90 mb-6">
-            Ready to create your own amazing Thailand story?
-          </p>
-          <Button 
-            size="lg"
-            className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold shadow-strong hover:shadow-strong transition-all duration-300 hover:scale-105"
-            aria-label="Start planning your trip"
-          >
-            Start Planning Your Trip
-          </Button>
         </div>
-      </div>
     </section>
   );
 };

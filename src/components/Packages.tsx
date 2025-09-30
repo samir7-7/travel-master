@@ -49,7 +49,7 @@ const Packages = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className={`text-center mb-16 ${shouldAnimate ? 'animate-slide-up' : 'opacity-0'}`}>
-          <h2 id="packages-heading" className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 id="packages-heading" className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-sans">
             Our Thailand Packages
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -174,20 +174,6 @@ const Packages = () => {
             </p>
           </div>
         )}
-
-        <div className={`text-center mt-16 ${shouldAnimate ? 'animate-fade-in' : 'opacity-0'}`}>
-          <p className="text-lg text-muted-foreground mb-6">
-            Don't see what you're looking for? We create custom itineraries too!
-          </p>
-          <Button 
-            size="lg"
-            className="bg-tropical hover:bg-tropical/90 text-tropical-foreground px-8 py-4 text-lg shadow-medium hover:shadow-strong transition-all duration-300"
-            aria-label="Request custom package"
-          >
-            <MapPin className="mr-2 h-5 w-5" aria-hidden="true" />
-            Request Custom Package
-          </Button>
-        </div>
       </div>
     </section>
   );
