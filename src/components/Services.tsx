@@ -58,7 +58,7 @@ const Services = () => {
                   {/* Icon */}
                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <IconComponent 
-                      className="h-8 w-8 text-white" 
+                      className="h-8 w-8 text-gray-800 group-hover:text-blue-800" 
                       aria-hidden="true"
                     />
                   </div>
@@ -87,22 +87,6 @@ const Services = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className={`text-center mt-16 ${shouldAnimate ? 'animate-fade-in' : 'opacity-0'}`}>
-          <p className="text-lg text-muted-foreground mb-6">
-            Ready to plan your perfect Thailand adventure?
-          </p>
-          <a 
-            href="https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-success text-success-foreground rounded-lg font-semibold text-lg hover:bg-success/90 transition-colors duration-300 shadow-medium hover:shadow-strong"
-            aria-label="Contact us on WhatsApp"
-          >
-            Contact Our Travel Experts
-          </a>
         </div>
       </div>
     </section>

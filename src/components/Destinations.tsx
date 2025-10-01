@@ -37,7 +37,7 @@ function Destinations() {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col text-center text-gray-50 p-4">
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col text-center text-gray-50 p-4">
                 <h3 className="text-2xl font-semibold">{destination.name}</h3>
                 <p className='text-sm'>Thailand</p>
               </div>
