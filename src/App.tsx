@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import { generateStructuredData } from "@/utils/seo";
 import { useState, useEffect } from "react";
 import Loader from "@/components/Loader";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -24,9 +25,9 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
   // Add structured data to page
-  const organizationSchema = generateStructuredData('Organization');
-  const localBusinessSchema = generateStructuredData('LocalBusiness');
-  const websiteSchema = generateStructuredData('WebSite');
+  const organizationSchema = generateStructuredData("Organization");
+  const localBusinessSchema = generateStructuredData("LocalBusiness");
+  const websiteSchema = generateStructuredData("WebSite");
 
   if (isLoading) {
     return <Loader />;
@@ -37,32 +38,32 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        
+        <SpeedInsights />
+
         {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema)
+            __html: JSON.stringify(organizationSchema),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema)
+            __html: JSON.stringify(localBusinessSchema),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema)
+            __html: JSON.stringify(websiteSchema),
           }}
         />
-        
+
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
