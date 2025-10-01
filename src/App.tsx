@@ -9,7 +9,6 @@ import NotFound from "./pages/NotFound";
 import { generateStructuredData } from "@/utils/seo";
 import { useState, useEffect } from "react";
 import Loader from "@/components/Loader";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -38,7 +37,6 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <SpeedInsights />
 
         {/* Structured Data */}
         <script
