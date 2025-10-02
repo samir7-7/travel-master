@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-thailand.jpg";
+import heroImage from "@/assets/hero-thailand.webp";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const Hero = () => {

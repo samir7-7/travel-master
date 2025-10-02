@@ -1,4 +1,8 @@
 import React from "react";
+import Bangkok from "@/assets/bangkok.webp";
+import Karabi from "@/assets/karabi.webp";
+import Phuket from "@/assets/phuket.webp";
+import Pattaya from "@/assets/pattaya.webp";
 
 function Destinations() {
   return (
@@ -18,23 +22,19 @@ function Destinations() {
           {[
             {
               name: "Bangkok",
-              image:
-                "https://images.pexels.com/photos/50689/skytrain-thailand-transportation-sky-50689.jpeg",
+              image: Bangkok,
             },
             {
               name: "Karabi",
-              image:
-                "https://images.pexels.com/photos/33638092/pexels-photo-33638092.jpeg",
+              image: Karabi,
             },
             {
               name: "Phuket",
-              image:
-                "https://images.pexels.com/photos/3355777/pexels-photo-3355777.jpeg",
+              image: Phuket,
             },
             {
               name: "Pattaya",
-              image:
-                "https://images.pexels.com/photos/26491552/pexels-photo-26491552.jpeg",
+              image: Pattaya,
             },
           ].map((destination) => (
             <div

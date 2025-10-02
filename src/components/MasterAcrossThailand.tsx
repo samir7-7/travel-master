@@ -38,9 +38,9 @@
 //   const { elementRef, shouldAnimate } = useIntersectionObserver();
 
 //   return (
-//     <section 
+//     <section
 //       ref={elementRef}
-//       id="master-across-thailand" 
+//       id="master-across-thailand"
 //       className="py-24 bg-background"
 //       aria-labelledby="master-thailand-heading"
 //     >
@@ -51,8 +51,8 @@
 //             Master Across Thailand
 //           </h2>
 //           <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
-//             Our Thailand company is headquartered in Pattaya, and we strive to provide our guests with exceptional service. 
-//             To ensure their comfort, we have our own hotel, banquet hall, and club. Moreover, we offer a variety of transportation 
+//             Our Thailand company is headquartered in Pattaya, and we strive to provide our guests with exceptional service.
+//             To ensure their comfort, we have our own hotel, banquet hall, and club. Moreover, we offer a variety of transportation
 //             options on land and water throughout Thailand to make our guests' travel more convenient.
 //           </p>
 //           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -63,7 +63,7 @@
 //         {/* Destinations Grid */}
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 //           {destinations.map((destination, index) => (
-//             <Card 
+//             <Card
 //               key={destination.id}
 //               className={`group hover:shadow-strong transition-all duration-500 hover:-translate-y-1 border-0 shadow-medium bg-card ${
 //                 shouldAnimate ? 'animate-scale-in' : 'opacity-0'
@@ -97,7 +97,7 @@
 //             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
 //               Let us create the perfect itinerary for your Thai adventure with our extensive network and local expertise.
 //             </p>
-//             <button 
+//             <button
 //               onClick={() => window.open('https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER', '_blank')}
 //               className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300"
 //             >
@@ -111,7 +111,6 @@
 // };
 
 // export default MasterAcrossThailand;
-
 
 // import React from "react";
 
@@ -185,7 +184,6 @@
 
 // export default ThailandDestinations;
 
-
 import React from "react";
 
 const ThailandDestinations: React.FC = () => {
@@ -202,10 +200,10 @@ const ThailandDestinations: React.FC = () => {
         <div className="w-full md:w-1/2 space-y-6">
           <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-[14px]">
             Our Thailand company is headquartered in Pattaya, and we strive to
-            provide our guests with exceptional service. To ensure their comfort,
-            we have our own hotel, banquet hall, and club. Moreover, we offer a
-            variety of transportation options on land and water throughout
-            Thailand to make our guests’ travel more convenient.
+            provide our guests with exceptional service. To ensure their
+            comfort, we have our own hotel, banquet hall, and club. Moreover, we
+            offer a variety of transportation options on land and water
+            throughout Thailand to make our guests’ travel more convenient.
           </p>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-[14px]">
@@ -240,18 +238,19 @@ const ThailandDestinations: React.FC = () => {
         <div className="w-full md:w-1/2 relative flex flex-col md:flex-row justify-center md:justify-end items-center">
           {/* Base Image */}
           <img
-            src="https://images.pexels.com/photos/1929611/pexels-photo-1929611.jpeg"
+            src="https://images.pexels.com/photos/1929611/pexels-photo-1929611.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
             alt="Bangkok City"
             className=" shadow-lg w-full sm:w-[80%] md:w-[400px] h-auto"
           />
           {/* Overlapping Image */}
           <img
-            src="https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg"
+            src="https://images.pexels.com/photos/460376/pexels-photo-460376.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
             alt="Thailand Temple"
             className="
               shadow-lg w-[80%] sm:w-[220px] md:w-[300px] h-auto mt-6
               md:mt-0 md:absolute md:top-16 md:left-[100px]
-            "loading="lazy"
+            "
+            loading="lazy"
           />
         </div>
       </div>

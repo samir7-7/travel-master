@@ -1,9 +1,17 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Twitter,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const message = "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
+  const message =
+    "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
 
   return (
     <footer className="bg-foreground text-white" role="contentinfo">
@@ -16,34 +24,34 @@ const Footer = () => {
               Travel Master Thailand
             </h3>
             <p className="text-white/80 leading-relaxed">
-              Your trusted partner for authentic Thailand experiences. We create 
-              unforgettable journeys that showcase the beauty, culture, and 
+              Your trusted partner for authentic Thailand experiences. We create
+              unforgettable journeys that showcase the beauty, culture, and
               spirit of Thailand.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4 pt-4">
-              <a 
-                href="https://facebook.com/travelmasterthailand" 
-                target="_blank" 
+              <a
+                href="https://facebook.com/travelmasterthailand"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Follow us on Facebook"
               >
                 <Facebook className="h-5 w-5" aria-hidden="true" />
               </a>
-              <a 
-                href="https://instagram.com/travelmasterthailand" 
-                target="_blank" 
+              <a
+                href="https://instagram.com/travelmasterthailand"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="h-5 w-5" aria-hidden="true" />
               </a>
-              <a 
-                href="https://twitter.com/travelmasterthailand" 
-                target="_blank" 
+              <a
+                href="https://twitter.com/travelmasterthailand"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Follow us on Twitter"
@@ -55,36 +63,38 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-tropical-light">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-tropical-light">
+              Quick Links
+            </h4>
             <nav>
               <ul className="space-y-2" role="list">
                 <li>
-                  <a 
-                    href="#services" 
+                  <a
+                    href="#services"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Our Services
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#packages" 
+                  <a
+                    href="#packages"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Tour Packages
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#why-choose-us" 
+                  <a
+                    href="#why-choose-us"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Why Choose Us
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#testimonials" 
+                  <a
+                    href="#testimonials"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Testimonials
@@ -96,44 +106,46 @@ const Footer = () => {
 
           {/* Popular Destinations */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-tropical-light">Popular Destinations</h4>
+            <h4 className="text-lg font-semibold text-tropical-light">
+              Popular Destinations
+            </h4>
             <nav>
               <ul className="space-y-2" role="list">
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Bangkok
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Phuket
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Chiang Mai
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Koh Samui
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
                     Phi Phi Islands
@@ -145,30 +157,43 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-tropical-light font-sans">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-tropical-light font-sans">
+              Contact Us
+            </h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-tropical-light mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <MapPin
+                  className="h-5 w-5 text-tropical-light mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
                 <div>
                   <p className="text-white/80 text-sm">Bangkok, Thailand</p>
-                  <p className="text-white/60 text-xs">Serving all of Thailand</p>
+                  <p className="text-white/60 text-xs">
+                    Serving all of Thailand
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-tropical-light flex-shrink-0" aria-hidden="true" />
-                <a 
-                  href="tel:9844600098" 
+                <Phone
+                  className="h-5 w-5 text-tropical-light flex-shrink-0"
+                  aria-hidden="true"
+                />
+                <a
+                  href="tel:9844600098"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
                   9844600098
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-tropical-light flex-shrink-0" aria-hidden="true" />
-                <a 
-                  href="mailto:info@travelmasterthailand.com" 
+                <Mail
+                  className="h-5 w-5 text-tropical-light flex-shrink-0"
+                  aria-hidden="true"
+                />
+                <a
+                  href="mailto:info@travelmasterthailand.com"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
                   info@travelmasterthailand.com
@@ -178,7 +203,12 @@ const Footer = () => {
 
             {/* WhatsApp CTA */}
             <Button
-              onClick={() =>window.open(`https://wa.me/9844600098?text=${message}`, '_blank')}
+              onClick={() =>
+                window.open(
+                  `https://wa.me/9844600098?text=${message}`,
+                  "_blank"
+                )
+              }
               className="w-full bg-success hover:bg-success/90 text-success-foreground mt-4"
               aria-label="Contact us on WhatsApp"
             >
@@ -195,30 +225,29 @@ const Footer = () => {
               <p>
                 © {currentYear} Travel Master Thailand. All rights reserved.
               </p>
-              
             </div>
-            
+
             <nav>
               <ul className="flex space-x-6 text-sm" role="list">
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/60 hover:text-tropical-light transition-colors duration-300"
                   >
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/60 hover:text-tropical-light transition-colors duration-300"
                   >
                     Terms of Service
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-white/60 hover:text-tropical-light transition-colors duration-300"
                   >
                     Cookie Policy
