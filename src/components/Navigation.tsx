@@ -1,47 +1,59 @@
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Phone } from 'lucide-react';
-import { Image } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Phone } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const message = "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const message =
+    "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?";
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-     { href: '/', label: 'Home', isInternal: false },
-    { href: '#services', label: 'Services', isInternal: true },
-    { href: '#packages', label: 'Packages', isInternal: true },
-    { href: '/about', label: 'About', isInternal: false },
-    { href: '#testimonials', label: 'Testimonials', isInternal: true }
+    { href: "/", label: "Home", isInternal: false },
+    { href: "#services", label: "Services", isInternal: true },
+    { href: "#packages", label: "Packages", isInternal: true },
+    { href: "/about", label: "About", isInternal: false },
+    { href: "#testimonials", label: "Testimonials", isInternal: true },
   ];
 
+  // ✅ Fixed handleNavClick
   const handleNavClick = (href: string, isInternal: boolean) => {
     if (isInternal) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        setIsMobileMenuOpen(false);
+      if (location.pathname === "/") {
+        // Already on homepage → just scroll
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          setIsMobileMenuOpen(false);
+        }
+      } else {
+        // Navigate to homepage and pass state so Home can scroll
+        navigate("/", { state: { scrollTo: href } });
       }
     } else {
-      window.location.href = href;
+      navigate(href); // for normal route navigation
+      setIsMobileMenuOpen(false);
     }
   };
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'glass-effect shadow-medium' 
-          : 'bg-transparent'
+        isScrolled ? "glass-effect shadow-medium" : "bg-transparent"
       }`}
       role="navigation"
       aria-label="Main navigation"
@@ -50,13 +62,17 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a 
-              href="/" 
+            <a
+              href="/"
               className="text-2xl font-bold text-white hover:text-tropical-light transition-colors duration-300"
               aria-label="Travel Master Thailand - Home"
             >
-              <img src="/travelmasterlogo.svg" width={110} alt="travel master logo" loading="lazy"/>
-             
+              <img
+                src="/travelmasterlogo.svg"
+                width={110}
+                alt="travel master logo"
+                loading="lazy"
+              />
             </a>
           </div>
 
@@ -67,17 +83,22 @@ const Navigation = () => {
                 key={link.href}
                 onClick={() => handleNavClick(link.href, link.isInternal)}
                 className={`transition-colors duration-300 font-medium ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white/90 hover:text-tropical-light'
+                  isScrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-white/90 hover:text-tropical-light"
                 }`}
               >
                 {link.label}
               </button>
             ))}
-            
+
             <Button
-              onClick={() => window.open(`https://wa.me/9844600098?text=${message}`, '_blank')}
+              onClick={() =>
+                window.open(
+                  `https://wa.me/9844600098?text=${message}`,
+                  "_blank"
+                )
+              }
               className="bg-success hover:bg-success/90 text-success-foreground"
               aria-label="Contact us on WhatsApp"
             >
@@ -117,7 +138,10 @@ const Navigation = () => {
               <div className="pt-2">
                 <Button
                   onClick={() => {
-                    window.open(`https://wa.me/9844600098?text=${message}`, '_blank');
+                    window.open(
+                      `https://wa.me/9844600098?text=${message}`,
+                      "_blank"
+                    );
                     setIsMobileMenuOpen(false);
                   }}
                   className="w-full bg-success hover:bg-success/90 text-success-foreground"

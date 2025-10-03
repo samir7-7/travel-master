@@ -11,8 +11,19 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Connect from "@/components/Connect";
 import { useEffect } from "react";
 import Destinations from "@/components/Destinations";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.querySelector(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   // SEO and performance optimizations
   useEffect(() => {
     // Preload critical images
