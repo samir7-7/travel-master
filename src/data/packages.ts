@@ -60,22 +60,6 @@ export const travelPackages: TravelPackage[] = [
     included: ['Private Guide', 'Entrance Fees', 'Traditional Meals', 'Transport']
   },
   {
-    id: 'northern-adventure',
-    title: 'Northern Thailand Adventure',
-    description: 'Explore the mountains, hill tribes, and cultural treasures of Northern Thailand.',
-    image: 'package-bangkok', // Reusing for demo
-    price: 'From $449',
-    duration: '6 Days / 5 Nights',
-    category: 'adventure',
-    highlights: [
-      'Chiang Mai Old City',
-      'Elephant Sanctuary',
-      'Hill Tribe Villages',
-      'White Temple (Wat Rong Khun)'
-    ],
-    included: ['Mountain Lodge', 'Trekking Guide', 'All Meals', '4WD Transport']
-  },
-  {
     id: 'phuket-beach',
     title: 'Phuket Beach Paradise',
     description: 'Relax on pristine beaches and enjoy water sports in Thailand\'s most famous beach destination.',

@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect } from "react";
+import Member1 from "@/assets/member-1.png";
+import Member2 from "@/assets/member-2.jpg";
 
 const About = () => {
   const message =
@@ -29,26 +31,16 @@ const About = () => {
     {
       name: "Roshan Sapkota",
       position: "CEO",
-      image:
-        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: Member2,
       description:
         "Roshan is a serial entrepreneur, international hotelier. He is into travel business since more than a decade with full of knowledge from many countries like – Thailand, Dubai, Azerbaijan, Singapore, Malaysia, Indonesia, Spain, Italy, Netherlands and many more into his network group.",
     },
     {
       name: "Shan",
       position: "COO",
-      image:
-        "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: Member1,
       description:
         "A seasoned travel professional with decades of experience in tourism, specializing in sales and operations for renowned companies like SOTC and Thomas Cook. Currently managing inbound sales and operations in Thailand, delivering exceptional travel experiences with expertise and passion.",
-    },
-    {
-      name: "Damini",
-      position: "OPERATION MANAGER",
-      image:
-        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description:
-        "Damini is a highly motivated and dynamic professional who oversees the daily operations of the organization while coordinating with all departments. She holds a Master's degree in Tourism Management and has previously worked with a well-known airline before joining our team.",
     },
   ];
 

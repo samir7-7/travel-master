@@ -213,19 +213,19 @@ const ThailandDestinations: React.FC = () => {
           <ul className="space-y-4 sm:space-y-5 md:space-y-8 text-lg sm:text-2xl md:text-4xl font-jakarta font-light">
             <li>
               <span className="text-red-600 block text-lg font-light">01</span>
-              Bangkok & Pattaya
+              Bangkok
             </li>
             <li>
               <span className="text-red-600 block text-lg font-light">02</span>
-              Phuket & Krabi
+              Phuket
             </li>
             <li>
               <span className="text-red-600 block text-lg font-light">03</span>
-              Chiang Mai and Rai
+              Pattaya
             </li>
             <li>
               <span className="text-red-600 block text-lg font-light">04</span>
-              Koh Samui
+              Krabi
             </li>
             <li>
               <span className="text-red-600 block text-lg font-light">05</span>

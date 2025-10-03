@@ -12,6 +12,7 @@ import Connect from "@/components/Connect";
 import { useEffect } from "react";
 import Destinations from "@/components/Destinations";
 import { useLocation } from "react-router-dom";
+import ActivitiesGrid from "@/components/ActivitiesGrid";
 
 const Index = () => {
   const location = useLocation();
@@ -62,6 +63,7 @@ const Index = () => {
         <Packages />
         <Destinations />
         <MasterAcrossThailand />
+        <ActivitiesGrid />
         <Counters />
         <Connect />
         <Testimonials />
