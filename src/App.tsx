@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import { generateStructuredData } from "@/utils/seo";
 import { useState, useEffect } from "react";
 import Loader from "@/components/Loader";
+import Blog from "./pages/Blog";
+import FullBlog from "./pages/FullBlog";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +64,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog/:slug" element={<FullBlog />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -26,26 +26,49 @@ const Navigation = () => {
     { href: "/", label: "Home", isInternal: false },
     { href: "#services", label: "Services", isInternal: true },
     { href: "#packages", label: "Packages", isInternal: true },
+    { href: "/blog", label: "Blogs", isInternal: false },
     { href: "/about", label: "About", isInternal: false },
     { href: "#testimonials", label: "Testimonials", isInternal: true },
   ];
 
   // ✅ Fixed handleNavClick
+  // const handleNavClick = (href: string, isInternal: boolean) => {
+  //   if (isInternal) {
+  //     if (location.pathname === "/") {
+  //       // Already on homepage → just scroll
+  //       const element = document.querySelector(href);
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: "smooth" });
+  //         setIsMobileMenuOpen(false);
+  //       }
+  //     } else {
+  //       // Navigate to homepage and pass state so Home can scroll
+  //       navigate("/", { state: { scrollTo: href } });
+  //     }
+  //   } else {
+  //     navigate(href); // for normal route navigation
+  //     setIsMobileMenuOpen(false);
+  //   }
+  // };
+
   const handleNavClick = (href: string, isInternal: boolean) => {
     if (isInternal) {
       if (location.pathname === "/") {
-        // Already on homepage → just scroll
-        const element = document.querySelector(href);
+        // Expect only section IDs (like "about" or "#about")
+        const targetId = href.startsWith("#") ? href : `#${href}`;
+        const element = document.querySelector(targetId);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
           setIsMobileMenuOpen(false);
         }
       } else {
-        // Navigate to homepage and pass state so Home can scroll
-        navigate("/", { state: { scrollTo: href } });
+        // Navigate to homepage and pass the section ID
+        const targetId = href.startsWith("#") ? href : `#${href}`;
+        navigate("/", { state: { scrollTo: targetId } });
       }
     } else {
-      navigate(href); // for normal route navigation
+      // Normal route navigation (like /blog, /contact, etc.)
+      navigate(href);
       setIsMobileMenuOpen(false);
     }
   };
