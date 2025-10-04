@@ -23,6 +23,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import packageBangkok from "@/assets/package-bangkok.jpg";
 import packageIslands from "@/assets/package-islands.jpg";
 import packageTemple from "@/assets/ancient-temple.jpeg";
+import ancientTemple from "@/assets/package-temple.jpg";
 
 const iconMap = {
   Globe,
@@ -122,7 +123,11 @@ const Packages = () => {
               {/* Package Image */}
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={imageMap[pkg.image as keyof typeof imageMap]}
+                  src={
+                    pkg.id === "temple-heritage"
+                      ? ancientTemple
+                      : imageMap[pkg.image as keyof typeof imageMap]
+                  }
                   alt={`${pkg.title} - ${pkg.description}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
