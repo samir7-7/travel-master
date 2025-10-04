@@ -132,7 +132,7 @@ const Footer = () => {
                     href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
-                    Chiang Mai
+                    Pattaya
                   </a>
                 </li>
                 <li>
@@ -140,7 +140,7 @@ const Footer = () => {
                     href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
-                    Koh Samui
+                    Krabi
                   </a>
                 </li>
                 <li>
@@ -148,7 +148,7 @@ const Footer = () => {
                     href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
-                    Phi Phi Islands
+                    Hua Hin
                   </a>
                 </li>
               </ul>

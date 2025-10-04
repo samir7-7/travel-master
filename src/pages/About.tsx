@@ -33,14 +33,14 @@ const About = () => {
       position: "CEO",
       image: Member2,
       description:
-        "Roshan is a serial entrepreneur, international hotelier. He is into travel business since more than a decade with full of knowledge from many countries like – Thailand, Dubai, Azerbaijan, Singapore, Malaysia, Indonesia, Spain, Italy, Netherlands and many more into his network group.",
+        "Roshan has over 15 years of experience in the travel industry. He is passionate about creating unforgettable travel experiences for clients and has a deep understanding of the market.",
     },
     {
-      name: "Shan",
+      name: "Simon Sapkota",
       position: "COO",
       image: Member1,
       description:
-        "A seasoned travel professional with decades of experience in tourism, specializing in sales and operations for renowned companies like SOTC and Thomas Cook. Currently managing inbound sales and operations in Thailand, delivering exceptional travel experiences with expertise and passion.",
+        "Simon has over 10 years of experience in the travel and tourism industry. He has a deep understanding of the market and is passionate about creating unforgettable travel experiences for clients.",
     },
   ];
 

@@ -22,7 +22,7 @@ import {
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import packageBangkok from "@/assets/package-bangkok.jpg";
 import packageIslands from "@/assets/package-islands.jpg";
-import packageTemple from "@/assets/package-temple.jpg";
+import packageTemple from "@/assets/ancient-temple.jpeg";
 
 const iconMap = {
   Globe,

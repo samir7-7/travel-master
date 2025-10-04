@@ -71,7 +71,7 @@ export const travelPackages: TravelPackage[] = [{
   },
   {
     id: 'phuket-beach',
-    title: 'Phuket Beach Paradise',
+    title: 'Pattaya Beach',
     description: 'Relax on pristine beaches and enjoy water sports in Thailand\'s most famous beach destination.',
     image: 'package-islands',
     duration: '4 Days / 3 Nights',

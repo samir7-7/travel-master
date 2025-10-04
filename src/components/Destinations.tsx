@@ -1,8 +1,9 @@
 import React from "react";
-import Bangkok from "@/assets/bangkok.webp";
+import Bangkok from "@/assets/bangkok.jpeg";
 import Karabi from "@/assets/karabi.webp";
 import Phuket from "@/assets/phuket.webp";
-import Pattaya from "@/assets/pattaya.webp";
+import Pattaya from "@/assets/pattaya.jpeg";
+import HuaHin from "@/assets/hua-hin.avif";
 
 function Destinations() {
   return (
@@ -35,6 +36,10 @@ function Destinations() {
             {
               name: "Pattaya",
               image: Pattaya,
+            },
+            {
+              name: "Hua Hin",
+              image: HuaHin,
             },
           ].map((destination) => (
             <div
