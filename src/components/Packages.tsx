@@ -104,7 +104,7 @@ const Packages = () => {
               key={pkg.id}
               className={`group overflow-hidden hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border-0 shadow-medium ${
                 shouldAnimate ? "animate-scale-in" : "opacity-0"
-              }`}
+              } ${pkg.category === "recommended" ? "bg-[#3B8AB8]" : ""}`}
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Package Image */}
@@ -122,7 +122,11 @@ const Packages = () => {
 
                 {/* Category Badge */}
                 <Badge
-                  className="absolute top-4 left-4 bg-primary text-primary-foreground capitalize"
+                  className={`absolute top-4 left-4 bg-primary text-primary-foreground capitalize ${
+                    pkg.category === "recommended"
+                      ? "bg-yellow-500 text-black py-2"
+                      : ""
+                  }`}
                   aria-label={`Category: ${pkg.category}`}
                 >
                   {pkg.category}
@@ -134,30 +138,57 @@ const Packages = () => {
               <CardContent className="p-6">
                 {/* Title & Duration */}
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  <h3
+                    className={`text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300 ${
+                      pkg.category === "recommended"
+                        ? "text-gray-50 group-hover:text-gray-100"
+                        : ""
+                    }`}
+                  >
                     {pkg.title}
                   </h3>
                   <div className="flex items-center text-muted-foreground text-sm">
-                    <Clock className="h-4 w-4 mr-1" aria-hidden="true" />
-                    <span>{pkg.duration}</span>
+                    <Clock
+                      className={`h-4 w-4 mr-1 ${
+                        pkg.category === "recommended" ? "text-gray-50" : ""
+                      }`}
+                      aria-hidden="true"
+                    />
+                    <span
+                      className={`${
+                        pkg.category === "recommended" ? "text-gray-50" : ""
+                      }`}
+                    >
+                      {pkg.duration}
+                    </span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3">
+                <p
+                  className={`text-foreground mb-4 leading-relaxed line-clamp-3 ${
+                    pkg.category === "recommended" ? "text-gray-50" : ""
+                  }`}
+                >
                   {pkg.description}
                 </p>
 
                 {/* Highlights */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-foreground mb-2">
+                  <h4
+                    className={`font-semibold text-foreground mb-2 ${
+                      pkg.category === "recommended" ? "text-gray-50" : ""
+                    }`}
+                  >
                     Highlights:
                   </h4>
                   <ul className="space-y-1" role="list">
                     {pkg.highlights.slice(0, 3).map((highlight, idx) => (
                       <li
                         key={idx}
-                        className="text-sm text-muted-foreground flex items-center"
+                        className={`text-sm text-foreground flex items-center ${
+                          pkg.category === "recommended" ? "text-gray-50" : ""
+                        }`}
                       >
                         <Star
                           className="h-3 w-3 text-sunset mr-2 flex-shrink-0"
@@ -167,7 +198,13 @@ const Packages = () => {
                       </li>
                     ))}
                     {pkg.highlights.length > 3 && (
-                      <li className="text-sm text-primary font-medium">
+                      <li
+                        className={`text-sm text-primary font-medium ${
+                          pkg.category === "recommended"
+                            ? "text-yellow-500"
+                            : ""
+                        }`}
+                      >
                         +{pkg.highlights.length - 3} more highlights
                       </li>
                     )}
@@ -176,7 +213,11 @@ const Packages = () => {
 
                 {/* CTA Button */}
                 <Button
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground group-hover:shadow-medium transition-all duration-300"
+                  className={`w-full bg-primary hover:bg-primary-dark text-primary-foreground group-hover:shadow-medium transition-all duration-300 ${
+                    pkg.category === "recommended"
+                      ? "bg-gray-50 text-primary"
+                      : ""
+                  }`}
                   aria-label={`View details for ${pkg.title}`}
                 >
                   Book Now
