@@ -10,7 +10,7 @@ export interface TravelPackage {
 }
 
 export const travelPackages: TravelPackage[] = [{
-    id: 'bangkok-adventure',
+    id: 'bangkok-adventure-1',
     title: 'Best Recommended Package',
     description: 'Discover the vibrant capital of Thailand with guided tours of ancient temples, bustling markets, and modern attractions.',
     image: 'package-bangkok',

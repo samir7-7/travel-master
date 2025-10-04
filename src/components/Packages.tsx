@@ -12,6 +12,12 @@ import {
   Waves,
   Mountain,
   ArrowRight,
+  Hotel,
+  Plane,
+  Car,
+  Ship,
+  Utensils,
+  X,
 } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import packageBangkok from "@/assets/package-bangkok.jpg";
@@ -34,6 +40,7 @@ const imageMap = {
 const Packages = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const { elementRef, shouldAnimate } = useIntersectionObserver();
+  const [showRecommendedInfo, setShowRecommendedInfo] = useState(false);
 
   const filteredPackages =
     activeCategory === "all"
@@ -102,6 +109,11 @@ const Packages = () => {
           {filteredPackages.map((pkg, index) => (
             <Card
               key={pkg.id}
+              onClick={() => {
+                if (pkg.category === "recommended") {
+                  setShowRecommendedInfo(true);
+                }
+              }}
               className={`group overflow-hidden hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border-0 shadow-medium ${
                 shouldAnimate ? "animate-scale-in" : "opacity-0"
               } ${pkg.category === "recommended" ? "bg-[#3B8AB8]" : ""}`}
@@ -241,6 +253,99 @@ const Packages = () => {
           </div>
         )}
       </div>
+      {showRecommendedInfo && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[9999]">
+          <div className="relative bg-white rounded-2xl shadow-2xl w-[90%] max-w-4xl h-[80%] flex flex-col p-8">
+            {/* Close button */}
+            <button
+              onClick={() => setShowRecommendedInfo(false)}
+              className="absolute top-4 right-4 text-gray-600 hover:text-black"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {/* Header */}
+            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+              Bangkok & Pattaya Package
+            </h2>
+
+            {/* Content */}
+            <div className="grid grid-cols-2 gap-8 flex-1">
+              {/* Itinerary */}
+              <div>
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  <Plane className="h-5 w-5 text-primary" /> Itinerary
+                </h3>
+                <ul className="space-y-3 text-gray-700 text-sm leading-relaxed">
+                  <li className="flex gap-2">
+                    <Car className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Day 1:</strong> Pick up from Airport → Transfer to
+                      Pattaya hotel (Private car)
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Ship className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Day 2:</strong> Coral island tour by speed boat
+                      with lunch (SIC)
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Car className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Day 3:</strong> Check out Pattaya hotel → Transfer
+                      to Bangkok + City Tour (Private)
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Utensils className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Day 4:</strong> Leisure day in Bangkok
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Plane className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Day 5:</strong> Check out → Airport drop → Fly to
+                      Nepal
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Package Info */}
+              <div>
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  <Hotel className="h-5 w-5 text-primary" /> Package Details
+                </h3>
+                <p className="text-gray-700 text-sm leading-relaxed mb-6">
+                  <strong>Duration:</strong> 4 Nights / 5 Days <br />
+                  <strong>Price:</strong> NPR 18,500 per person
+                </p>
+
+                <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                  <Hotel className="h-5 w-5 text-primary" /> Hotels
+                </h3>
+                <ul className="text-gray-700 text-sm space-y-2">
+                  <li className="flex gap-2">
+                    <Hotel className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Pattaya Hotel:</strong> 3★ with breakfast
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <Hotel className="h-4 w-4 text-sunset mt-1" />
+                    <span>
+                      <strong>Bangkok Hotel:</strong> 3★ with breakfast
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
