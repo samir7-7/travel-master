@@ -186,7 +186,7 @@ const About = () => {
               <button
                 onClick={() =>
                   window.open(
-                    `https://wa.me/9844600098?text=${message}`,
+                    `https://wa.me/66661355426?text=${message}`,
                     "_blank"
                   )
                 }

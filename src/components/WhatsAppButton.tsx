@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { MessageCircle, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { MessageCircle, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,13 +29,13 @@ const WhatsAppButton = () => {
 
   const handleWhatsAppClick = () => {
     // REPLACE_WITH_WHATSAPP_NUMBER - User should replace with actual WhatsApp number
-    const whatsappNumber = '9844600098'; 
+    const whatsappNumber = "66661355426";
     const message = encodeURIComponent(
-      'Hello! I\'m interested in learning more about your Thailand travel packages. Can you help me plan my trip?'
+      "Hello! I'm interested in learning more about your Thailand travel packages. Can you help me plan my trip?"
     );
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-    
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   if (!isVisible) return null;
@@ -93,7 +93,7 @@ const WhatsAppButton = () => {
 
       {/* Screen Reader Alternative */}
       <div className="sr-only">
-        <a 
+        <a
           href={`https://wa.me/REPLACE_WITH_WHATSAPP_NUMBER`}
           target="_blank"
           rel="noopener noreferrer"

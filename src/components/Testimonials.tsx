@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { testimonials } from "@/data/testimonials";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,9 @@ const Testimonials = () => {
 
   const goToPrevious = () => {
     setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const goToNext = () => {
@@ -39,25 +41,37 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section 
+    <section
       ref={elementRef}
-      id="testimonials" 
+      id="testimonials"
       className="py-24 bg-gradient-primary"
       aria-labelledby="testimonials-heading"
     >
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className={`text-center mb-16 ${shouldAnimate ? 'animate-slide-up' : 'opacity-0'}`}>
-          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-4 font-sans">
+        <div
+          className={`text-center mb-16 ${
+            shouldAnimate ? "animate-slide-up" : "opacity-0"
+          }`}
+        >
+          <h2
+            id="testimonials-heading"
+            className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-4 font-sans"
+          >
             What Our Travelers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Real experiences from real travelers who discovered the magic of Thailand with us.
+            Real experiences from real travelers who discovered the magic of
+            Thailand with us.
           </p>
         </div>
 
         {/* Testimonial Carousel */}
-        <div className={`max-w-4xl mx-auto ${shouldAnimate ? 'animate-fade-in' : 'opacity-0'}`}>
+        <div
+          className={`max-w-4xl mx-auto ${
+            shouldAnimate ? "animate-fade-in" : "opacity-0"
+          }`}
+        >
           <Card className="border-0 shadow-strong bg-white/95 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12 text-center">
               {/* Quote Icon */}
@@ -66,14 +80,17 @@ const Testimonials = () => {
               </div>
 
               {/* Rating Stars */}
-              <div className="flex justify-center mb-6" aria-label={`${currentTestimonial.rating} out of 5 stars`}>
+              <div
+                className="flex justify-center mb-6"
+                aria-label={`${currentTestimonial.rating} out of 5 stars`}
+              >
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
                     className={`h-6 w-6 ${
-                      i < currentTestimonial.rating 
-                        ? 'text-sunset fill-current' 
-                        : 'text-muted-foreground'
+                      i < currentTestimonial.rating
+                        ? "text-sunset fill-current"
+                        : "text-muted-foreground"
                     }`}
                     aria-hidden="true"
                   />
@@ -90,7 +107,9 @@ const Testimonials = () => {
                 <cite className="text-xl font-bold text-foreground not-italic">
                   {currentTestimonial.name}
                 </cite>
-                <div className="text-muted-foreground">{currentTestimonial.location}</div>
+                <div className="text-muted-foreground">
+                  {currentTestimonial.location}
+                </div>
                 <div className="text-sm text-primary font-medium">
                   {currentTestimonial.package}
                 </div>
@@ -111,18 +130,22 @@ const Testimonials = () => {
             </Button>
 
             {/* Dots Indicator */}
-            <div className="flex gap-2" role="group" aria-label="Testimonial navigation">
+            <div
+              className="flex gap-2"
+              role="group"
+              aria-label="Testimonial navigation"
+            >
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-white scale-125'
-                      : 'bg-white/50 hover:bg-white/75'
+                      ? "bg-white scale-125"
+                      : "bg-white/50 hover:bg-white/75"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  aria-current={index === currentIndex ? 'true' : 'false'}
+                  aria-current={index === currentIndex ? "true" : "false"}
                 />
               ))}
             </div>
@@ -143,13 +166,16 @@ const Testimonials = () => {
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
               className="text-gray-700 hover:text-gray-900 text-sm transition-colors duration-300"
-              aria-label={isAutoPlaying ? 'Pause auto-play' : 'Resume auto-play'}
+              aria-label={
+                isAutoPlaying ? "Pause auto-play" : "Resume auto-play"
+              }
             >
-              {isAutoPlaying ? 'Auto-playing' : 'Paused'} • Click to {isAutoPlaying ? 'pause' : 'resume'}
+              {isAutoPlaying ? "Auto-playing" : "Paused"} • Click to{" "}
+              {isAutoPlaying ? "pause" : "resume"}
             </button>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   );
 };

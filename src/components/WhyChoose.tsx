@@ -5,13 +5,17 @@ const WhyChooseUs = () => {
     <div className="w-full">
       <section className="px-4 py-12 max-w-7xl mx-auto flex flex-col gap-9 items-center">
         <div className="text-center mb-8">
-        <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-sans">
+          <h2
+            id="services-heading"
+            className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-sans"
+          >
             Why choose us?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive travel services designed to make your Thailand experience 
-            seamless, authentic, and unforgettable.
-          </p></div>
+            Comprehensive travel services designed to make your Thailand
+            experience seamless, authentic, and unforgettable.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Left Block */}
           <div className="bg-red-800 flex items-center justify-center text-white text-2xl font-semibold p-8">

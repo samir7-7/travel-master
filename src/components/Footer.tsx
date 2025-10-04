@@ -180,10 +180,10 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <a
-                  href="tel:9844600098"
+                  href="tel:+66 6-6135-5426"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
-                  9844600098
+                  +66 6-6135-5426
                 </a>
               </div>
 
@@ -193,10 +193,10 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <a
-                  href="mailto:info@travelmasterthailand.com"
+                  href="mailto:Infotravelmaster53@gmail.com"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
-                  info@travelmasterthailand.com
+                  Infotravelmaster53@gmail.com
                 </a>
               </div>
             </div>
@@ -205,7 +205,7 @@ const Footer = () => {
             <Button
               onClick={() =>
                 window.open(
-                  `https://wa.me/9844600098?text=${message}`,
+                  `https://wa.me/66661355426?text=${message}`,
                   "_blank"
                 )
               }
