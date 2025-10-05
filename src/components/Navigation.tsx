@@ -31,26 +31,6 @@ const Navigation = () => {
     { href: "#testimonials", label: "Testimonials", isInternal: true },
   ];
 
-  // ✅ Fixed handleNavClick
-  // const handleNavClick = (href: string, isInternal: boolean) => {
-  //   if (isInternal) {
-  //     if (location.pathname === "/") {
-  //       // Already on homepage → just scroll
-  //       const element = document.querySelector(href);
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: "smooth" });
-  //         setIsMobileMenuOpen(false);
-  //       }
-  //     } else {
-  //       // Navigate to homepage and pass state so Home can scroll
-  //       navigate("/", { state: { scrollTo: href } });
-  //     }
-  //   } else {
-  //     navigate(href); // for normal route navigation
-  //     setIsMobileMenuOpen(false);
-  //   }
-  // };
-
   const handleNavClick = (href: string, isInternal: boolean) => {
     if (isInternal) {
       if (location.pathname === "/") {
@@ -67,7 +47,6 @@ const Navigation = () => {
         navigate("/", { state: { scrollTo: targetId } });
       }
     } else {
-      // Normal route navigation (like /blog, /contact, etc.)
       navigate(href);
       setIsMobileMenuOpen(false);
     }
@@ -122,8 +101,8 @@ const Navigation = () => {
                   "_blank"
                 )
               }
-              className="bg-success hover:bg-success/90 text-success-foreground"
-              aria-label="Contact us on WhatsApp"
+              className="bg-primary hover:bg-primary/90 text-success-foreground"
+              aria-label="Contact us on Whats App"
             >
               <Phone className="h-4 w-4 mr-2" aria-hidden="true" />
               Contact Us
