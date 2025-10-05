@@ -156,10 +156,10 @@ const Packages = () => {
                 {/* Title & Duration */}
                 <div className="mb-4">
                   <h3
-                    className={`text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300 ${
+                    className={`text-xl font-bold text-foreground mb-2  transition-colors duration-300 ${
                       pkg.category === "recommended"
                         ? "text-gray-50 group-hover:text-gray-100"
-                        : ""
+                        : "group-hover:text-primary"
                     }`}
                   >
                     {pkg.title}

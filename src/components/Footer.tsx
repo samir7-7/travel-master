@@ -6,6 +6,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -50,13 +51,13 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
-                href="https://twitter.com/travelmasterthailand"
+                href="https://www.tiktok.com/@travelmasterthailand"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors duration-300"
                 aria-label="Follow us on Twitter"
               >
-                <Twitter className="h-5 w-5" aria-hidden="true" />
+                <FaTiktok className="h-5 w-5" aria-hidden="true" />
               </a>
             </div>
           </div>
