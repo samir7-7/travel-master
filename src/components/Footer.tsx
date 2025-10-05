@@ -194,10 +194,10 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <a
-                  href="mailto:Infotravelmaster53@gmail.com"
+                  href="mailto:Ssarpkotar@gmail.com"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
-                  Infotravelmaster53@gmail.com
+                  Ssarpkotar@gmail.com
                 </a>
               </div>
             </div>
