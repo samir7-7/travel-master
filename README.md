@@ -216,12 +216,3 @@ Consider adding these features:
 - Payment processing
 - Real-time chat integration
 
-## 📄 License
-
-This project is licensed under the MIT License. See LICENSE file for details.
-
----
-
-**Built with ❤️ for Travel Master Thailand**
-
-*Creating unforgettable Thailand experiences since 2009*
