@@ -326,7 +326,7 @@ const Packages = () => {
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed mb-6">
                   <strong>Duration:</strong> 4 Nights / 5 Days <br />
-                  <strong>Price:</strong> NPR 18,500 per person
+                  <strong>Price:</strong> THB 3900 per person
                 </p>
 
                 <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">

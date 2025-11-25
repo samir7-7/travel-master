@@ -168,7 +168,10 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <div>
-                  <p className="text-white/80 text-sm">Bangkok, Thailand</p>
+                  <p className="text-white/80 text-sm">
+                    Office No. 537, Building B, FlyBird Condo Pattaya City,
+                    Chonburi 20150
+                  </p>
                   <p className="text-white/60 text-xs">
                     Serving all of Thailand
                   </p>
@@ -194,10 +197,10 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <a
-                  href="mailto:Ssarpkotar@gmail.com"
+                  href="mailto:infotravelmasterdmc@gmail.com"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
-                  Ssarpkotar@gmail.com
+                  infotravelmasterdmc@gmail.com
                 </a>
               </div>
             </div>

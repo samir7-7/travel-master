@@ -89,19 +89,17 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-muted-foreground leading-relaxed">
                     <p>
-                      Travel Master DMC is a premier tour operator and
+                      TTravel Master Thailand is a premier tour operator and
                       destination management company, offering comprehensive
-                      travel management services in both Thailand and the UAE.
-                      We are proud to deliver B2B, Group, and MICE services,
-                      ensuring exceptional experiences for all our clients.
+                      travel management services across Thailand. We proudly
+                      deliver B2B, Group, and MICE services, ensuring
+                      exceptional experiences for all our clients.
                     </p>
                     <p>
                       In Thailand, we operate under the Tourism Authority of
-                      Thailand (TAT) License No. 14/03283, and in the UAE, we
-                      are licensed as an inbound tour operator under the Dubai
-                      Trade License No. 961780. Additionally, we are esteemed
+                      Thailand (TAT) License No. 14/03283 and are esteemed
                       members of the official Association of Thai Travel Agents
-                      (ATTA) and the Dubai Travel & Tour Agents Group.
+                      (ATTA).
                     </p>
                     <p>
                       Our commitment to excellence and our extensive network
@@ -110,16 +108,15 @@ const About = () => {
                     </p>
                     <p>
                       As a destination management company, we specialize in
-                      providing comprehensive travel management services that
-                      cater to the diverse needs of our clients. Our team
-                      consists of experienced professionals with extensive
-                      knowledge and expertise in the travel industry, enabling
-                      us to deliver tailored solutions and personalized
-                      experiences to our clients.
+                      providing end-to-end travel services tailored to the
+                      diverse needs of our clients. Our team of experienced
+                      professionals brings deep industry knowledge, allowing us
+                      to deliver personalized solutions and memorable
+                      experiences.
                     </p>
                     <p className="font-semibold text-foreground">
-                      Our commitment to excellence, attention to detail, and
-                      customer satisfaction is at the heart of everything we do.
+                      Customer satisfaction, attention to detail, and service
+                      excellence are at the core of everything we do.
                     </p>
                   </div>
                 </div>
