@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useEffect } from "react";
 import Member1 from "@/assets/Saimon.jpeg";
 import Member2 from "@/assets/Roshan.jpeg";
-import Ganesh from "@/assets/Ganesh.jpeg";
-import Sanjay from "@/assets/Sanjay.jpeg";
+import Ganesh from "@/assets/ganesh.jpeg";
+import Sanjay from "@/assets/sanjay.jpeg";
 
 const About = () => {
   const message =
