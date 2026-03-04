@@ -4,6 +4,7 @@ import Karabi from "@/assets/karabi.webp";
 import Phuket from "@/assets/phuket.webp";
 import Pattaya from "@/assets/pattaya.jpeg";
 import HuaHin from "@/assets/hua-hin.avif";
+import Chian from "@/assets/chian-mai.jpg";
 
 function Destinations() {
   return (
@@ -40,6 +41,10 @@ function Destinations() {
             {
               name: "Hua Hin",
               image: HuaHin,
+            },
+            {
+              name: "Chian Mai",
+              image: Chian,
             },
           ].map((destination) => (
             <div

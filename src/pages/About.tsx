@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect } from "react";
-import Member1 from "@/assets/member-1.png";
-import Member2 from "@/assets/member-2.jpg";
+import Member1 from "@/assets/Saimon.jpeg";
+import Member2 from "@/assets/Roshan.jpeg";
+import Ganesh from "@/assets/Ganesh.jpeg";
+import Sanjay from "@/assets/Sanjay.jpeg";
 
 const About = () => {
   const message =
@@ -41,6 +43,20 @@ const About = () => {
       image: Member1,
       description:
         "Simon has over 10 years of experience in the travel and tourism industry. He has a deep understanding of the market and is passionate about creating unforgettable travel experiences for clients.",
+    },
+    {
+      name: "Sanjay Thapa",
+      position: "Operations Executive",
+      image: Sanjay,
+      description:
+        "Our Operations Executive is responsible for managing all operational logistics, ensuring that our clients have a seamless and comfortable travel experience throughout Thailand.",
+    },
+    {
+      name: "Ganesh Lamsal",
+      position: "Guest Representative",
+      image: Ganesh,
+      description:
+        "Our Guest Representative is dedicated to providing exceptional customer service, assisting clients with their inquiries, and ensuring that their needs are met throughout their journey with us.",
     },
   ];
 
@@ -184,7 +200,7 @@ const About = () => {
                 onClick={() =>
                   window.open(
                     `https://wa.me/66661355426?text=${message}`,
-                    "_blank"
+                    "_blank",
                   )
                 }
                 className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300 shadow-medium hover:shadow-strong"

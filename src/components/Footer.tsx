@@ -152,6 +152,14 @@ const Footer = () => {
                     Hua Hin
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-tropical-light transition-colors duration-300"
+                  >
+                    Chaing Mai
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -169,8 +177,8 @@ const Footer = () => {
                 />
                 <div>
                   <p className="text-white/80 text-sm">
-                    Office No. 537, Building B, FlyBird Condo Pattaya City,
-                    Chonburi 20150
+                    325/152 mo 10, bang lamung Pattaya Sai 2 Rd, Pattaya City,
+                    chonburi Chon Buri 20150
                   </p>
                   <p className="text-white/60 text-xs">
                     Serving all of Thailand
@@ -197,10 +205,16 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <a
-                  href="mailto:infotravelmasterdmc@gmail.com"
+                  href="mailto:Ssarpkotar@gmail.com"
                   className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
                 >
-                  infotravelmasterdmc@gmail.com
+                  Ssarpkotar@gmail.com
+                </a>
+                <a
+                  href="mailto:Rohsan@travelmasterdmc.com"
+                  className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
+                >
+                  Rohsan@travelmasterdmc.com
                 </a>
               </div>
             </div>
@@ -210,7 +224,7 @@ const Footer = () => {
               onClick={() =>
                 window.open(
                   `https://wa.me/66661355426?text=${message}`,
-                  "_blank"
+                  "_blank",
                 )
               }
               className="w-full bg-success hover:bg-success/90 text-success-foreground mt-4"
