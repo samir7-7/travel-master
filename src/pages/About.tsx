@@ -38,13 +38,6 @@ const About = () => {
         "Roshan has over 15 years of experience in the travel industry. He is passionate about creating unforgettable travel experiences for clients and has a deep understanding of the market.",
     },
     {
-      name: "Simon Sapkota",
-      position: "COO",
-      image: Member1,
-      description:
-        "Simon has over 10 years of experience in the travel and tourism industry. He has a deep understanding of the market and is passionate about creating unforgettable travel experiences for clients.",
-    },
-    {
       name: "Sanjay Thapa",
       position: "Operations Executive",
       image: Sanjay,
