@@ -239,13 +239,25 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-white/60 text-sm text-center md:text-left">
+            <div className="flex-1" />
+            <div className="text-white/60 text-sm text-center flex-1">
               <p>
                 © {currentYear} Travel Master Thailand. All rights reserved.
               </p>
+              <p className="mt-2 flex justify-center items-center gap-1">
+                Developed and maintained by{" "}
+                <a
+                  href="https://sigmoit.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-tropical-light hover:text-white transition-colors duration-300"
+                >
+                  Sigmoit
+                </a>
+              </p>
             </div>
 
-            <nav>
+            <nav className="flex-1 flex justify-end">
               <ul className="flex space-x-6 text-sm" role="list">
                 <li>
                   <a
