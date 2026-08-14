@@ -15,7 +15,6 @@ export interface TravelPackage {
   excluded?: string[];
   itinerary?: ItineraryDay[];
   badgeText?: string;
-  price?: string;
 }
 
 export const travelPackages: TravelPackage[] = [
