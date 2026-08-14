@@ -49,6 +49,10 @@ const ThailandDestinations: React.FC = () => {
               <span className="text-red-600 block text-lg font-light">06</span>
               Chiang Mai
             </li>
+            <li>
+              <span className="text-red-600 block text-lg font-light">07</span>
+              Chiang Rai
+            </li>
           </ul>
         </div>
 

@@ -157,7 +157,15 @@ const Footer = () => {
                     href="#"
                     className="text-white/80 hover:text-tropical-light transition-colors duration-300"
                   >
-                    Chaing Mai
+                    Chiang Mai
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-tropical-light transition-colors duration-300"
+                  >
+                    Chiang Rai
                   </a>
                 </li>
               </ul>
@@ -205,16 +213,10 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <a
-                  href="mailto:Ssarpkotar@gmail.com"
-                  className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
+                  href="mailto:infotravelmasterdmc@gmail.com"
+                  className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm break-all"
                 >
-                  Ssarpkotar@gmail.com
-                </a>
-                <a
-                  href="mailto:Rohsan@travelmasterdmc.com"
-                  className="text-white/80 hover:text-tropical-light transition-colors duration-300 text-sm"
-                >
-                  Rohsan@travelmasterdmc.com
+                  infotravelmasterdmc@gmail.com
                 </a>
               </div>
             </div>

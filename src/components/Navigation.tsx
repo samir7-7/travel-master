@@ -26,6 +26,7 @@ const Navigation = () => {
     { href: "/", label: "Home", isInternal: false },
     { href: "#services", label: "Services", isInternal: true },
     { href: "#packages", label: "Packages", isInternal: true },
+    { href: "#office", label: "Our Office", isInternal: true },
     { href: "/blog", label: "Blogs", isInternal: false },
     { href: "/about", label: "About", isInternal: false },
     { href: "#testimonials", label: "Testimonials", isInternal: true },

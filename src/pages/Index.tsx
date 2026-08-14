@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import Destinations from "@/components/Destinations";
 import { useLocation } from "react-router-dom";
 import ActivitiesGrid from "@/components/ActivitiesGrid";
+import OurOffice from "@/components/OurOffice";
 
 const Index = () => {
   const location = useLocation();
@@ -64,6 +65,7 @@ const Index = () => {
         <Destinations />
         <MasterAcrossThailand />
         <ActivitiesGrid />
+        <OurOffice />
         <Counters />
         <Connect />
         <Testimonials />
