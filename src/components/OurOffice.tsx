@@ -11,22 +11,22 @@ const OurOffice: React.FC = () => {
 
   const officeImages = [
     {
-      src: "/images/office/office-exterior.jpg",
+      src: "/images/office/office-storefront.jpg",
       title: "Storefront & Main Entrance",
       tag: "Main Storefront",
       description: "Conveniently located storefront with easy street access.",
     },
     {
-      src: "/images/office/office-interior.jpg",
-      title: "Reception & Consultation Desk",
-      tag: "Welcome Lounge",
-      description: "Our modern, air-conditioned office ready to welcome all travelers.",
+      src: "/images/office/office-team.jpg",
+      title: "Dedicated Travel Specialists",
+      tag: "Expert Team",
+      description: "Our experienced travel consultants ready to craft your custom itinerary.",
     },
     {
-      src: "/images/office/office-sign.jpg",
-      title: "Illuminated Branch Signboard",
-      tag: "Official Branch",
-      description: "Look for our iconic blue Travel Master sign on your visit.",
+      src: "/images/office/office-interior.jpg",
+      title: "Reception & Consultation Lounge",
+      tag: "Welcome Lounge",
+      description: "Modern, air-conditioned consultation area for seamless trip planning.",
     },
   ];
 

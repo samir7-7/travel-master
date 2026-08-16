@@ -7,6 +7,8 @@ import Member1 from "@/assets/Saimon.jpeg";
 import Member2 from "@/assets/Roshan.jpeg";
 import Ganesh from "@/assets/ganesh.jpeg";
 import Sanjay from "@/assets/sanjay.jpeg";
+import Ram from "@/assets/ram.png";
+import Lakshman from "@/assets/lakshman.png";
 
 const About = () => {
   const message =
@@ -50,6 +52,20 @@ const About = () => {
       image: Ganesh,
       description:
         "Our Guest Representative is dedicated to providing exceptional customer service, assisting clients with their inquiries, and ensuring that their needs are met throughout their journey with us.",
+    },
+    {
+      name: "Ram Bhattarai",
+      position: "Transportation Head",
+      image: Ram,
+      description:
+        "Our Transportation Head oversees all fleet operations and transfer logistics, ensuring safe, punctual, and comfortable journeys for all our travelers.",
+    },
+    {
+      name: "Lakshman Timsina",
+      position: "Operations Executive",
+      image: Lakshman,
+      description:
+        "Our Operations Executive coordinates field operations and tour itineraries, working closely with local partners to deliver flawless on-ground experiences.",
     },
   ];
 
