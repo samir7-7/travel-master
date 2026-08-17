@@ -14,7 +14,6 @@ import Destinations from "@/components/Destinations";
 import { useLocation } from "react-router-dom";
 import ActivitiesGrid from "@/components/ActivitiesGrid";
 import OurOffice from "@/components/OurOffice";
-import PromoPopup from "@/components/PromoPopup";
 
 const Index = () => {
   const location = useLocation();
@@ -54,9 +53,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      {/* Special Offer Popup Modal */}
-      <PromoPopup />
-
       {/* Navigation */}
       <Navigation />
 
